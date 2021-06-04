@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.png" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+			integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk="
+			crossorigin="anonymous"
+		/>
+		<link rel="stylesheet" href="../css/style.css" />
+		<title>Multiplayer Online Game</title>
+	</head>
+	<body>
+<div id="preloader">
+  <div class="container">
+
+<img class="preloader_image"src="../img/preloader.gif" alt="preloader">
+</div>
+</div>
+
+
+    <div class="logout_section">
+     <a href="/users/logout" class="btn btn-secondary logout">Logout</a>
+   </div>
+
+
+
+ <p id="user_id"><%= user.id %></p>
+<p id="user_name"><%= user.name %></p>
+<!-- <p id="user_id"><%= user.id %></p> -->
+
+<!-- 
+		<div id="game_select" class="join-container">
+			<main class="join-main">
+
+				<div id="tictactoegame">
+                   <img src="img/tictactoe_icon.jpg" alt="TicTacToe">
+                   <p id="tictactoegame_state">2/0</p>
+                   <div id="tictactoegame_overlay"></div>
+				</div>
+
+			</main>
+		</div> -->
+
+
+
+
+
+<div id="canvas_container">
+    <img class="canvas_container_border" src="../img/border.png" alt="game">
+
+    <canvas id="game_canvas" width="910" height="410"></canvas>
+
+   <!--   -->
+
+</div>
+<header class="chat-header">       
+  <div class="buttons_block">
+    <div>
+        <img id="move_up"class="game_arrows" src="../img/up_arrow.png" alt="arrow">
+    </div>
+        <img id="move_left"class="game_arrows " src="../img/left_arrow.png" alt="arrow">
+
+        <img id="move_right"class="game_arrows double" src="../img/right_arrow.png" alt="arrow">
+    <div>
+        <img id="move_down"class="game_arrows" src="../img/down.png" alt="arrow">
+    </div>
+  </div>
+</header>
+      <main class="chat-main">
+        <div class="chat-sidebar">          
+          <h3><i class="fas fa-users"></i> 
+          Online</h3>
+          <ul id="users"></ul>
+        </div>
+        <div class="chat-messages"></div>
+      </main>
+      <div class="chat-form-container">
+        <form id="chat-form">
+          <input
+            id="msg"
+            type="text"
+            placeholder="Enter Message"
+            required
+            autocomplete="off"
+          />
+          <button class="btn"><i class="fas fa-paper-plane"></i> Send</button>
+        </form>
+      </div>
+    </div>
+    <script src="../socket.io/socket.io.js"></script>
+    <script src="../js/main.js"></script>
+    <script type="module" src="../js/client.js"></script> 
+    <script src="../js/howler.js"></script>   
+	</body>
+</html>

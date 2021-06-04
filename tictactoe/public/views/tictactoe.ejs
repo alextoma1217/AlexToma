@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.png" />
+    <link rel="stylesheet" href="https://bootswatch.com/3/journal/bootstrap.min.css" />
+		<link rel="stylesheet" href="../css/style.css" />
+		<title>Multiplayer Online Game</title>
+	</head>
+	<body>
+     <p id="user_id"><%= user.id %></p>
+    <div class="logout_section">
+     <a href="/users/logout" class="btn btn-secondary logout">Logout</a>
+   </div> 
+<div class="container">
+    <div class="col-md-12">
+      <div class="col-md-3">
+      <p  class="information_text" id="message">Waiting for 2 players...</p>
+
+      <p  class="information_text">Spectators: <span id="spectators"> 0</span></p>
+      </div>
+      <div class="col-md-6">
+      <span id="player1" class="game-title"></span>     
+        <div class="game">
+          <div class="tictactoe_cell" data-cell="1"></div>
+          <div class="tictactoe_cell" data-cell="2"></div>
+          <div class="tictactoe_cell" data-cell="3"></div>
+          <div class="tictactoe_cell" data-cell="4"></div>
+          <div class="tictactoe_cell" data-cell="5"></div>
+          <div class="tictactoe_cell" data-cell="6"></div>
+          <div class="tictactoe_cell" data-cell="7"></div>
+          <div class="tictactoe_cell" data-cell="8"></div>
+          <div class="tictactoe_cell" data-cell="9"></div>
+        </div>
+        <span id="player2" class="game-title"></span>
+      </div>
+          <div class="col-md-3">
+           <!--   <form name="clockform"> -->
+                 <p class="information_text">Countdown:</p>
+                 <input id="countdown_input" name="clock" size="12" maxlength="12" value="00:00:00">
+                
+                <!--  </form>
+ -->
+
+          </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+</div>
+   
+    <script src="../socket.io/socket.io.js"></script>
+    <script src="../js/tictac.js"></script>
+	</body>
+</html>
